@@ -36,13 +36,26 @@ git commit -m "Initial commit: Resume for AML/STR position"
 gh repo create resume --public --source . --remote origin --push
 ```
 
-**방법 B: 수동 설정**
+**방법 B: 수동 설정 (현재 상태)**
 
-1. GitHub에서 `resume` 이름의 public 레포지토리 생성
-2. 아래 명령어 실행:
+✅ **Git 초기화 및 커밋은 이미 완료되었습니다!**
+
+1. GitHub에서 레포지토리 생성:
+   - https://github.com/new 접속
+   - Repository name: `resume`
+   - Public 선택
+   - **중요**: README, .gitignore, license는 추가하지 않기 (이미 파일이 있음)
+   - Create repository 클릭
+
+2. 아래 명령어 실행 (레포지토리 생성 후):
 
 ```bash
-git remote add origin https://github.com/[username]/resume.git
+git remote add origin https://github.com/minmax10/resume.git
+git push -u origin main
+```
+
+**또는 이미 remote가 추가되어 있다면:**
+```bash
 git push -u origin main
 ```
 
