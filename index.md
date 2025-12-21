@@ -2,37 +2,44 @@
 layout: default
 ---
 
-<div style="text-align: center; margin-bottom: 40px;">
-  <img src="{{ '/assets/profile.jpg' | relative_url }}" alt="Hwang SunWoo" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid #ddd; margin-bottom: 20px;">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 300px;">
+    <h1 style="margin-top: 0;">Hwang SunWoo</h1>
+    <h2 style="margin-top: 5px; color: #666; font-weight: normal;">AML/STR Specialist</h2>
+  </div>
+  <div style="flex: 1; min-width: 300px; text-align: right;">
+    <p style="margin: 5px 0;">Email: <a href="mailto:[공개용 이메일]">[공개용 이메일]</a></p>
+    <p style="margin: 5px 0;">Web: <a href="https://github.com/minmax10" target="_blank">https://github.com/minmax10</a></p>
+  </div>
 </div>
 
-# Hwang SunWoo
+## About Me
 
-## AML/STR Specialist
+<div style="display: flex; gap: 20px; margin-bottom: 30px; flex-wrap: wrap;">
+  <div style="flex: 0 0 200px;">
+    <img src="{{ '/assets/profile.jpg' | relative_url }}" alt="Hwang SunWoo" style="width: 200px; height: 200px; border-radius: 8px; object-fit: cover; border: 2px solid #ddd;">
+  </div>
+  <div style="flex: 1; min-width: 300px;">
+    <p>[총 n년]차 금융권 AML 전담 경험을 보유한 AML/STR 전문가입니다.</p>
 
- Email: [공개용 이메일]
+    <p>현재 [회사명]에서 STR(의심거래보고) 및 CTR(고액현금거래보고) 운영, SQL Query 기반 Rule 운영 및 정합성 검증 업무를 수행하고 있습니다. 또한, 해외 규제 기반 국외 AML 모니터링 체계 도입 프로젝트에 참여하여 컨테이너 구조와 Elasticsearch 기반 실시간 모니터링 시스템 구축 경험을 보유하고 있습니다.</p>
 
- Web: [https://github.com/minmax10](https://github.com/minmax10)
+    <p>STR 운영 프로세스 표준화 및 단순화를 위해 전산 요건 정의, 테스트(UAT), 로직 개선, 대용량 쿼리 튜닝 등에 참여하며, 유관부서(개발/운영/컴플라이언스/현업)와의 협업을 통한 일정/품질/리스크 관리에 강점을 가지고 있습니다.</p>
 
-### About Me
+    <p><strong>기술 스택</strong></p>
+    <ul>
+      <li>AML/STR - <mark>STR 정책/내규 운영</mark>, <mark>룰 기반 탐지</mark>, <mark>결과 검증</mark>, <mark>보고 품질 관리</mark>, <mark>운영 프로세스 표준화</mark></li>
+      <li>Data/Query - <mark>SQL(룰 추출/검증)</mark>, <mark>대용량 쿼리 튜닝</mark>, <mark>데이터 정제/추출</mark>, <mark>배치 흐름 이해</mark></li>
+      <li>Platform - <mark>Elasticsearch 기반 모니터링</mark>, <mark>컨테이너 환경 운영/연동</mark></li>
+      <li>Delivery - <mark>전산 개발 요건 정의</mark>, <mark>테스트(UAT)</mark>, <mark>이슈 트래킹</mark>, <mark>릴리즈 리스크 관리</mark></li>
+      <li>Collaboration - <mark>다부서 조율</mark>, <mark>해외 협력사 커뮤니케이션</mark></li>
+    </ul>
+  </div>
+</div>
 
-[총 n년]차 금융권 AML 전담 경험을 보유한 AML/STR 전문가입니다.
+## Company
 
-현재 [회사명]에서 STR(의심거래보고) 및 CTR(고액현금거래보고) 운영, SQL Query 기반 Rule 운영 및 정합성 검증 업무를 수행하고 있습니다. 또한, 해외 규제 기반 국외 AML 모니터링 체계 도입 프로젝트에 참여하여 컨테이너 구조와 Elasticsearch 기반 실시간 모니터링 시스템 구축 경험을 보유하고 있습니다.
-
-STR 운영 프로세스 표준화 및 단순화를 위해 전산 요건 정의, 테스트(UAT), 로직 개선, 대용량 쿼리 튜닝 등에 참여하며, 유관부서(개발/운영/컴플라이언스/현업)와의 협업을 통한 일정/품질/리스크 관리에 강점을 가지고 있습니다.
-
-**기술 스택**
-
-* AML/STR - STR 정책/내규 운영, 룰 기반 탐지, 결과 검증, 보고 품질 관리, 운영 프로세스 표준화
-* Data/Query - SQL(룰 추출/검증), 대용량 쿼리 튜닝, 데이터 정제/추출, 배치 흐름 이해
-* Platform - Elasticsearch 기반 모니터링, 컨테이너 환경 운영/연동
-* Delivery - 전산 개발 요건 정의, 테스트(UAT), 이슈 트래킹, 릴리즈 리스크 관리
-* Collaboration - 다부서 조율, 해외 협력사 커뮤니케이션
-
-### Company
-
-#### [회사명]
+### [회사명]
 
 **AML (STR/CTR) & Monitoring**
 
@@ -49,9 +56,9 @@ STR 운영 프로세스 표준화 및 단순화를 위해 전산 요건 정의, 
 * 해외 규제 기반 국외 AML 모니터링 체계 도입 (컨테이너 + Elasticsearch)
 * FDS(이상금융거래탐지) 및 발신 로깅 운영
 
-### Experience
+## Experience
 
-#### 국외 AML 모니터링 체계 도입
+### 국외 AML 모니터링 체계 도입
 
 **[YYYY.MM] ~ [YYYY.MM]**
 
@@ -61,9 +68,9 @@ STR 운영 프로세스 표준화 및 단순화를 위해 전산 요건 정의, 
   * 기존 행내 시스템과의 갭(운영/데이터/권한/로그/성능) 해결
   * ETL 개발 및 운영
 * 사용 기술
-  * Elasticsearch, Container, ETL, SQL, Monitoring
+  * <mark>Elasticsearch</mark>, <mark>Container</mark>, <mark>ETL</mark>, <mark>SQL</mark>, <mark>Monitoring</mark>
 
-#### STR 운영 고도화
+### STR 운영 고도화
 
 **[YYYY.MM] ~ [YYYY.MM]**
 
@@ -74,7 +81,7 @@ STR 운영 프로세스 개선 작업 수행
 * 배치 흐름도/테이블 연계도 작성 후 팀 공유 및 공용 매뉴얼 반영
 * 보고 리드타임 단축 및 오탐/재작업률 개선
 
-#### FDS 및 발신 로깅 운영
+### FDS 및 발신 로깅 운영
 
 **[YYYY.MM] ~ [YYYY.MM]**
 
@@ -86,7 +93,7 @@ STR 운영 프로세스 개선 작업 수행
 * 다양한 테스트 중 크리티컬 예외 케이스 발견으로 업무 오류 미연 방지
 * 예외 케이스 재발 방지, 모니터링 누락 감소, 장애/오탐 감소
 
-#### STR/CTR Rule 운영 및 검증
+### STR/CTR Rule 운영 및 검증
 
 **[YYYY.MM] ~ [YYYY.MM]**
 
@@ -96,7 +103,7 @@ STR 운영 프로세스 개선 작업 수행
 * 룰 결과 검증 쿼리 작성 및 정합성 점검 체크리스트 작성
 * 운영 가이드/매뉴얼 작성 및 표준화 작업
 
-#### 전산 협업 및 요구사항 정의
+### 전산 협업 및 요구사항 정의
 
 **[YYYY.MM] ~ [YYYY.MM]**
 
@@ -107,13 +114,6 @@ STR 운영 프로세스 개선 작업 수행
 
 ---
 
-## Education / Certifications
-
-* [학력]
-* [자격증: AML 관련/SQL 관련/기타]
-
----
-
-## Notes
-
-* 내부 시스템명/테이블명/룰 임계치/기관 제출 양식 등 민감 정보는 비식별화하여 기재했음
+<div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #666;">
+  <p>Hwang SunWoo - <a href="mailto:[공개용 이메일]">[공개용 이메일]</a> - References on request</p>
+</div>
