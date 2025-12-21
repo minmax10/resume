@@ -2,7 +2,11 @@
 layout: default
 ---
 
-# Resume (AML/STR)
+<div style="text-align: center; margin-bottom: 30px;">
+  <img src="{{ '/assets/profile.jpg' | relative_url }}" alt="Hwang SunWoo" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid #ddd; margin-bottom: 20px;">
+  <h1 style="margin-top: 0;">Hwang SunWoo</h1>
+  <h2 style="color: #666; font-weight: normal; margin-top: 5px;">Resume (AML/STR)</h2>
+</div>
 
 - Email: [공개용 이메일]
 - Phone: [공개용 연락처 or 생략]
