@@ -1,72 +1,117 @@
 # Resume (AML/STR)
 
-GitHub Pages로 공개되는 이력서 페이지임.
+- Email: [공개용 이메일]
 
-- Web: https://minmax10.github.io/resume/
+- Phone: [공개용 연락처 or 생략]
 
-- PDF: ./assets/resume.pdf (선택)
+- GitHub: https://github.com/minmax10
 
-## Update Log
+- LinkedIn/Portfolio: [선택]
 
-- YYYY-MM-DD: 초기 작성
+- Location: [선택]
 
-- YYYY-MM-DD: STR 운영/전산 요건/SQL 섹션 보강
+- Keywords: AML, STR, CTR, Rule Ops, SQL, Monitoring, ETL, Elasticsearch, Container
 
-## Notes
+---
 
-- 내부 시스템명/테이블명/룰 임계치/기관 제출 양식 등 민감 정보는 비식별화하여 기재 권장
+## Summary
 
-## GitHub Pages 설정 방법
+- 금융권 AML 전담 경험 [총 n년] 보유, STR(의심거래보고) 업무 경험 [n년] 보유임
 
-### 1. Git 초기화 및 커밋
+- SQL Query 기반 STR/CTR Rule 운영 및 정합성 검증 경험 보유임
 
-```bash
-cd resume
-git init
-git branch -M main
-git add .
-git commit -m "Initial commit: Resume for AML/STR position"
-```
+- STR 운영 프로세스 표준화/단순화 관점으로 전산 요건 정의, 테스트(UAT), 로직 개선, 대용량 쿼리 튜닝 참여 경험 있음
 
-### 2. GitHub 레포지토리 생성 및 푸시
+- 해외 규제 기반 국외 AML 모니터링 체계 도입 경험 있음(컨테이너 구조 + Elasticsearch 기반 실시간 모니터링)
 
-**방법 A: GitHub CLI 사용 (권장)**
+- 유관부서(개발/운영/컴플라이언스/현업) 협업 통한 일정/품질/리스크 관리 강점 있음
 
-```bash
-gh repo create resume --public --source . --remote origin --push
-```
+---
 
-**방법 B: 수동 설정 (현재 상태)**
+## Core Skills
 
-✅ **Git 초기화 및 커밋은 이미 완료되었습니다!**
+- AML/STR: STR 정책/내규 운영, 룰 기반 탐지, 결과 검증, 보고 품질 관리, 운영 프로세스 표준화
 
-1. GitHub에서 레포지토리 생성:
-   - https://github.com/new 접속
-   - Repository name: `resume`
-   - Public 선택
-   - **중요**: README, .gitignore, license는 추가하지 않기 (이미 파일이 있음)
-   - Create repository 클릭
+- Data/Query: SQL(룰 추출/검증), 대용량 쿼리 튜닝, 데이터 정제/추출, 배치 흐름 이해
 
-2. 아래 명령어 실행 (레포지토리 생성 후):
+- Platform: Elasticsearch 기반 모니터링, 컨테이너 환경 운영/연동 경험
 
-```bash
-git remote add origin https://github.com/minmax10/resume.git
-git push -u origin main
-```
+- Delivery: 전산 개발 요건 정의, 테스트(UAT), 이슈 트래킹, 릴리즈 리스크 관리
 
-**또는 이미 remote가 추가되어 있다면:**
-```bash
-git push -u origin main
-```
+- Collaboration: 다부서 조율, 해외 협력사 커뮤니케이션(상해 거주 경험 기반)
 
-### 3. GitHub Pages 활성화
+---
 
-1. GitHub 레포지토리 페이지에서 **Settings** → **Pages** 이동
-2. **Source** 섹션에서:
-   - **Deploy from a branch** 선택
-   - **Branch**: `main` 선택
-   - **Folder**: `/ (root)` 선택
-   - **Save** 클릭
-3. 몇 분 후 `https://[username].github.io/resume/` 에서 확인 가능
+## Experience
 
-**참고**: Jekyll 테마가 적용되려면 레포지토리 이름이 `[username].github.io`가 아닌 경우 위 설정이 필요합니다.
+### [회사명] / AML (STR/CTR) & Monitoring  |  [직무명]  |  [YYYY.MM ~ YYYY.MM]
+
+#### 국내 AML (STR/CTR 운영)
+
+- 완료 거래 데이터 기반으로 SQL Query 작성된 STR/CTR Rule에 따라 의심/고액현금 거래 내역 추출 및 검증 수행했음
+
+- 전 지점 AML 담당자 작성 보고가 규제기관 보고까지 안정적으로 이어지도록 운영 사이클 품질 관리에 참여했음
+
+- STR 운영 고도화를 위해 업무 화면 개발 참여, 자체 로직 개선, 대용량 쿼리 튜닝 수행했음
+
+- 배치 흐름도/테이블 연계도 작성 후 팀 공유했고 공용 매뉴얼 반영된 경험 있음(표준화/온보딩 효율화 목적)
+
+- (정량화 가능 지표) 보고 리드타임/오탐/재작업률/쿼리 수행시간 개선 등 [측정값 기입]
+
+#### 국외 AML (해외 규제 대응 + 실시간 모니터링 도입)
+
+- 해외 지점 국가별 법규 기반 국외 AML 운영 구조 이해 및 운영 이슈 대응 수행했음
+
+- 컨테이너 기반 서버 구조 + Elasticsearch로 실시간 대규모 모니터링 체계 도입에 참여/기여했음
+
+- 기존 행내 시스템과의 갭(운영/데이터/권한/로그/성능)을 해결하기 위해 주도적으로 학습 및 유관부서 협업 진행했음
+
+- 오픈 일정 내 안정적 도입 지원했고, 이후 신규 도입 업무 정담당으로 ETL 개발 참여했음
+
+- 유관부서 및 업무별 협업 기여로 [베스트 콜라보 상] 수상 경험 있음
+
+- 해외 협력사 커뮤니케이션 수행했고, WBS 상 리스크를 선제 파악해 준비하는 방식으로 일정 안정화에 기여했음
+
+#### FDS(이상금융거래탐지) 및 발신 로깅(실시간 데이터 운영)
+
+- 실시간 이체 거래 이상징후 파악 업무 수행했음(Rule 기반 탐지로 AML 룰 운영과 맥락 공유함)
+
+- 은행 내/외부 전송 파일 흐름 모니터링했고 데이터 정제/추출을 통해 거래/감사 필수 데이터 제공했음
+
+- 다양한 테스트 중 크리티컬 예외 케이스 발견해 업무 오류를 미연에 방지한 경험 있음
+
+- (정량화 가능 지표) 예외 케이스 재발 방지, 모니터링 누락 감소, 장애/오탐 감소 등 [측정값 기입]
+
+---
+
+## Selected Deliverables (강조용)
+
+- STR/CTR Rule 운영 산출물: 룰 결과 검증 쿼리, 정합성 점검 체크리스트, 운영 가이드/매뉴얼
+
+- 전산 협업 산출물: 요구사항 정의서, 테스트 시나리오(UAT), 릴리즈 체크리스트
+
+- 데이터 이해 산출물: 배치 흐름도, 테이블 연계도, 데이터 딕셔너리(필요 시)
+
+---
+
+## SQL (Query Test 대비 예시 섹션, 선택)
+
+- STR Rule 결과 검증용 쿼리 작성/튜닝 경험 있음
+
+- (예시) 룰 추출 결과와 원천 거래 테이블 매칭 검증, 중복/누락/기간 조건 검증, 성능 병목 구간 파악 등 수행 가능함
+
+- 실제 사용 SQL 예시는 보안상 비공개하며, 인터뷰에서 구조/접근 방식 중심으로 설명 가능함
+
+---
+
+## Education / Certifications (선택)
+
+- [학력]
+
+- [자격증: AML 관련/SQL 관련/기타]
+
+---
+
+## Notes (공개용 이력서 안전장치)
+
+- 내부 시스템명/테이블명/룰 임계치/기관 제출 양식 등 민감 정보는 비식별화하여 기재했음
