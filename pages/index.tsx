@@ -26,11 +26,9 @@ export default function Home() {
         <link rel="icon" href={globalPayload.favicon} />
       </Head>
 
-      <div className="resume-container">
-        <div className="resume-sidebar">
+      <main className="page-content" aria-label="Content">
+        <div className="wrapper">
           <Profile payload={profilePayload} />
-        </div>
-        <div className="resume-content">
           {!introducePayload.disable && <Introduce payload={introducePayload} />}
           {!skillPayload.disable && <Skill payload={skillPayload} />}
           {!experiencePayload.disable && <Experience payload={experiencePayload} />}
@@ -38,8 +36,7 @@ export default function Home() {
           {!educationPayload.disable && <Education payload={educationPayload} />}
           <Footer payload={footerPayload} />
         </div>
-      </div>
+      </main>
     </>
   )
 }
-

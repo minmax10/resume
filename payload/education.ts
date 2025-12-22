@@ -1,4 +1,5 @@
 export default {
+  disable: false,
   title: 'Education / Certifications',
   list: [
     {

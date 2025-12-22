@@ -1,4 +1,5 @@
 export default {
+  disable: false,
   title: 'About Me',
   contents: `[총 n년]차 금융권 AML 전담 경험을 보유한 AML/STR 전문가입니다.
 

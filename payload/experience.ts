@@ -1,4 +1,5 @@
 export default {
+  disable: false,
   title: 'Company',
   list: [
     {

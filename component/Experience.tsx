@@ -7,28 +7,35 @@ interface ExperienceProps {
       startDate: string
       endDate: string
       achievements: string[]
+      skillKeywords?: string[]
     }>
   }
 }
 
 export default function Experience({ payload }: ExperienceProps) {
   return (
-    <section className="section">
-      <h2>{payload.title}</h2>
+    <div className="container list-container">
+      <h3 id="company">{payload.title}</h3>
       {payload.list.map((exp, index) => (
-        <div key={index} style={{ marginBottom: '30px' }}>
-          <h3>{exp.title}</h3>
-          <p><strong>{exp.position}</strong></p>
-          <p>{exp.startDate} ~ {exp.endDate}</p>
-          <p><strong>주요 업무</strong></p>
-          <ul>
-            {exp.achievements.map((achievement, i) => (
-              <li key={i}>{achievement}</li>
-            ))}
-          </ul>
+        <div key={index} className="row clearfix layout layout-left border-no">
+          <div className="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+            <h4 id={exp.title.toLowerCase().replace(/\s+/g, '-')}>{exp.title}</h4>
+            <p><b>{exp.position}</b></p>
+            <p>{exp.startDate} ~ {exp.endDate}</p>
+          </div>
+          <div className="col-xs-12 col-sm-8 col-md-9 col-print-12 content">
+            <p><strong>주요 업무</strong></p>
+            <ul>
+              {exp.achievements.map((achievement, i) => (
+                <li key={i}>{achievement}</li>
+              ))}
+            </ul>
+            {exp.skillKeywords && exp.skillKeywords.length > 0 && (
+              <p><strong>Skill Keywords</strong><br />{exp.skillKeywords.join('')}</p>
+            )}
+          </div>
         </div>
       ))}
-    </section>
+    </div>
   )
 }
-

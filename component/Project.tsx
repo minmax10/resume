@@ -14,31 +14,27 @@ interface ProjectProps {
 
 export default function Project({ payload }: ProjectProps) {
   return (
-    <section className="section">
-      <h2>{payload.title}</h2>
+    <div className="container list-container">
+      <h3 id="experience">{payload.title}</h3>
       {payload.list.map((project, index) => (
-        <div key={index} style={{ marginBottom: '30px' }}>
-          <h3>{project.title}</h3>
-          <p><strong>{project.startDate} ~ {project.endDate}</strong></p>
-          <p>{project.description}</p>
-          <ul>
-            {project.achievements.map((achievement, i) => (
-              <li key={i}>{achievement}</li>
-            ))}
-          </ul>
-          {project.skillKeywords.length > 0 && (
-            <p style={{ marginTop: '10px' }}>
-              사용 기술: {project.skillKeywords.map((keyword, i) => (
-                <span key={i}>
-                  <mark>{keyword}</mark>
-                  {i < project.skillKeywords.length - 1 && ', '}
-                </span>
+        <div key={index} className="row clearfix layout layout-left border-no">
+          <div className="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+            <h4 id={project.title.toLowerCase().replace(/\s+/g, '-')}>{project.title}</h4>
+            <p><b>{project.startDate} ~ {project.endDate}</b></p>
+          </div>
+          <div className="col-xs-12 col-sm-8 col-md-9 col-print-12 content">
+            <p>{project.description}</p>
+            <ul>
+              {project.achievements.map((achievement, i) => (
+                <li key={i}>{achievement}</li>
               ))}
-            </p>
-          )}
+            </ul>
+            {project.skillKeywords && project.skillKeywords.length > 0 && (
+              <p><strong>사용 기술</strong><br />{project.skillKeywords.join(', ')}</p>
+            )}
+          </div>
         </div>
       ))}
-    </section>
+    </div>
   )
 }
-

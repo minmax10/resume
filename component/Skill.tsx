@@ -3,28 +3,31 @@ interface SkillProps {
     title: string
     list: Array<{
       title: string
-      items: string[]
+      items: Array<{
+        title: string
+        level?: number
+      }>
     }>
   }
 }
 
 export default function Skill({ payload }: SkillProps) {
   return (
-    <section className="section">
-      <h2>{payload.title}</h2>
-      <ul>
-        {payload.list.map((skill, index) => (
-          <li key={index}>
-            <strong>{skill.title}</strong> - {skill.items.map((item, i) => (
-              <span key={i}>
-                <mark>{item}</mark>
-                {i < skill.items.length - 1 && ', '}
-              </span>
+    <div className="container list-container">
+      <h3 id="skill">{payload.title}</h3>
+      {payload.list.map((category, catIndex) => (
+        <div key={catIndex}>
+          <h4>{category.title}</h4>
+          <ul>
+            {category.items.map((item, itemIndex) => (
+              <li key={itemIndex}>
+                {item.level && `${item.level} `}
+                {item.title}
+              </li>
             ))}
-          </li>
-        ))}
-      </ul>
-    </section>
+          </ul>
+        </div>
+      ))}
+    </div>
   )
 }
-
