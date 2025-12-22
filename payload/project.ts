@@ -1,26 +1,41 @@
 export default {
   disable: false,
-  title: 'Experience',
+  title: 'PROJECT',
   list: [
     {
+      title: 'STR Rule 운영 프로세스 표준화',
+      startDate: 'YYYY.MM',
+      endDate: 'YYYY.MM',
+      description: 'STR Rule 운영을 "검증 가능한 룰"로 전환하기 위한 프로세스 표준화 프로젝트',
+      skillKeywords: ['SQL', 'Rule Management', 'Process Standardization', 'STR'],
+      achievements: [
+        'STR Rule(100+개) 전수 점검을 통해 룰 산출 로직을 SQL로 검증',
+        '중복 검출 룰을 식별해 룰셋을 재정비(통합/우선순위/예외조건 정리)',
+        '룰 관리 기준(정의/검증/릴리즈/모니터링) 관점의 표준화를 병행하여 STR 운영의 일관성과 효율 강화',
+        '룰 결과 검증 쿼리 작성 및 정합성 점검 체크리스트 작성',
+        '운영 가이드/매뉴얼 작성 및 표준화 작업',
+      ],
+    },
+    {
       title: '국외 AML 모니터링 체계 도입',
-      startDate: '[YYYY.MM]',
-      endDate: '[YYYY.MM]',
-      description: '해외 규제 기반 국외 AML 모니터링 체계 도입 프로젝트 참여',
+      startDate: 'YYYY.MM',
+      endDate: 'YYYY.MM',
+      description: '해외 규제 기반 국외 AML 모니터링 체계 도입 프로젝트',
       skillKeywords: ['Elasticsearch', 'Container', 'ETL', 'SQL', 'Monitoring'],
       achievements: [
         '컨테이너 기반 서버 구조 설계 및 구축',
         'Elasticsearch 기반 실시간 대규모 모니터링 시스템 개발',
         '기존 행내 시스템과의 갭(운영/데이터/권한/로그/성능) 해결',
         'ETL 개발 및 운영',
+        '오픈 일정 내 안정적 도입 지원',
       ],
     },
     {
       title: 'STR 운영 고도화',
-      startDate: '[YYYY.MM]',
-      endDate: '[YYYY.MM]',
-      description: 'STR 운영 프로세스 개선 작업 수행',
-      skillKeywords: [],
+      startDate: 'YYYY.MM',
+      endDate: 'YYYY.MM',
+      description: 'STR 운영 프로세스 개선 및 효율화 작업',
+      skillKeywords: ['SQL', 'Query Optimization', 'STR'],
       achievements: [
         '업무 화면 개발 참여 및 자체 로직 개선을 통한 운영 효율성 향상',
         '대용량 쿼리 튜닝을 통한 쿼리 수행시간 개선',
@@ -29,39 +44,11 @@ export default {
       ],
     },
     {
-      title: 'FDS 및 발신 로깅 운영',
-      startDate: '[YYYY.MM]',
-      endDate: '[YYYY.MM]',
-      description: '실시간 데이터 운영 및 모니터링 업무 수행',
-      skillKeywords: [],
-      achievements: [
-        '실시간 이체 거래 이상징후 파악 업무 (Rule 기반 탐지)',
-        '은행 내/외부 전송 파일 흐름 모니터링',
-        '데이터 정제/추출을 통한 거래/감사 필수 데이터 제공',
-        '다양한 테스트 중 크리티컬 예외 케이스 발견으로 업무 오류 미연 방지',
-        '예외 케이스 재발 방지, 모니터링 누락 감소, 장애/오탐 감소',
-      ],
-    },
-    {
-      title: 'STR/CTR Rule 운영 및 검증',
-      startDate: '[YYYY.MM]',
-      endDate: '[YYYY.MM]',
-      description: 'SQL Query 기반 STR/CTR Rule 운영 및 정합성 검증',
-      skillKeywords: ['SQL', 'STR', 'CTR'],
-      achievements: [
-        'SQL Query 기반 STR/CTR Rule 운영 및 정합성 검증 수행',
-        '완료 거래 데이터 기반 의심/고액현금 거래 내역 추출 및 검증',
-        '전 지점 AML 담당자 작성 보고가 규제기관 보고까지 안정적으로 이어지도록 운영 사이클 품질 관리',
-        '룰 결과 검증 쿼리 작성 및 정합성 점검 체크리스트 작성',
-        '운영 가이드/매뉴얼 작성 및 표준화 작업',
-      ],
-    },
-    {
       title: '전산 협업 및 요구사항 정의',
-      startDate: '[YYYY.MM]',
-      endDate: '[YYYY.MM]',
+      startDate: 'YYYY.MM',
+      endDate: 'YYYY.MM',
       description: 'STR 운영 프로세스 표준화/단순화 관점으로 전산 요건 정의',
-      skillKeywords: [],
+      skillKeywords: ['Requirements Analysis', 'UAT', 'Process Improvement'],
       achievements: [
         'STR 운영 프로세스 표준화/단순화 관점으로 전산 요건 정의',
         '요구사항 정의서 작성 및 테스트 시나리오(UAT) 작성',
@@ -71,4 +58,3 @@ export default {
     },
   ],
 }
-

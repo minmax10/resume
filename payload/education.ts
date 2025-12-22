@@ -1,6 +1,6 @@
 export default {
   disable: false,
-  title: 'Education / Certifications',
+  title: 'EDUCATION',
   list: [
     {
       title: '[학력]',
@@ -18,4 +18,3 @@ export default {
     },
   ],
 }
-
