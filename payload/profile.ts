@@ -8,11 +8,6 @@ export default {
       href: 'mailto:[공개용 이메일]',
     },
     {
-      type: 'phone',
-      text: '[공개용 연락처 or 생략]',
-      href: 'tel:[공개용 연락처]',
-    },
-    {
       type: 'github',
       text: 'github.com/minmax10',
       href: 'https://github.com/minmax10',
@@ -24,8 +19,7 @@ export default {
     },
   ],
   notice: {
-    title: '',
+    title: 'Please contact me by email',
     disables: [],
   },
 }
-
