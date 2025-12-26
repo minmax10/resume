@@ -178,6 +178,10 @@
         padding: 40px 0 20px 0;
         margin: 20px 0;
         overflow-x: auto;
+        background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 50%, #f5f5f5 100%);
+        border: 2px solid #000;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.5);
       }
       .timeline-horizontal::before {
         content: "";
@@ -185,9 +189,27 @@
         top: 30px;
         left: 0;
         right: 0;
-        height: 2px;
-        background: #333;
+        height: 3px;
+        background: linear-gradient(to right, transparent 0%, #000 10%, #000 90%, transparent 100%);
         z-index: 1;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+      .timeline-horizontal::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 10px,
+          rgba(0, 0, 0, 0.02) 10px,
+          rgba(0, 0, 0, 0.02) 20px
+        );
+        border-radius: 8px;
+        pointer-events: none;
       }
       .timeline-item-horizontal {
         position: relative;
@@ -197,6 +219,10 @@
         text-align: center;
         padding: 0 10px;
         z-index: 2;
+        transition: transform 0.3s ease;
+      }
+      .timeline-item-horizontal:hover {
+        transform: translateY(-5px);
       }
       .timeline-item-horizontal::before {
         content: "";
@@ -204,37 +230,77 @@
         top: 24px;
         left: 50%;
         transform: translateX(-50%);
-        width: 14px;
-        height: 14px;
+        width: 16px;
+        height: 16px;
         border-radius: 50%;
-        background: #333;
-        border: 3px solid #fff;
-        box-shadow: 0 0 0 2px #333;
+        background: #000;
+        border: 4px solid #fff;
+        box-shadow: 0 0 0 2px #000, 0 2px 8px rgba(0, 0, 0, 0.3);
         z-index: 3;
       }
       .timeline-date-horizontal {
         font-weight: bold;
-        color: #666;
+        color: #000;
         font-size: 0.85rem;
         margin-bottom: 10px;
         white-space: nowrap;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        letter-spacing: 0.5px;
       }
       .timeline-title-horizontal {
         font-size: 1rem;
         font-weight: bold;
         margin: 35px 0 5px 0;
         line-height: 1.3;
+        color: #000;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
       }
       .timeline-org-horizontal {
-        color: #666;
+        color: #333;
         font-size: 0.85rem;
         margin: 5px 0;
+        font-weight: 500;
       }
       .timeline-content-horizontal {
         margin-top: 8px;
-        color: #555;
+        color: #444;
         font-size: 0.85rem;
         line-height: 1.4;
+      }
+      .certification-horizontal {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-around;
+        margin: 20px 0;
+      }
+      .certification-item {
+        flex: 1;
+        min-width: 200px;
+        max-width: 300px;
+        padding: 20px;
+        background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+        border: 2px solid #000;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+      }
+      .certification-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+      .certification-item h4 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 10px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
+      .certification-item p {
+        margin: 5px 0;
+        color: #333;
+        font-size: 0.9rem;
       }
       .details p {
         margin: 5px 0;
@@ -344,7 +410,9 @@
             <div class="timeline-item-horizontal">
               <div class="timeline-date-horizontal">2005 ~ 2010</div>
               <div class="timeline-title-horizontal">중국-상하이</div>
-              <div class="timeline-content-horizontal">6년 - 부모님 직장/유학</div>
+              <div class="timeline-content-horizontal">
+                6년 - 부모님 직장/유학
+              </div>
             </div>
             <div class="timeline-item-horizontal">
               <div class="timeline-date-horizontal">2017.03 ~ 2022.02</div>
@@ -352,42 +420,46 @@
             </div>
             <div class="timeline-item-horizontal">
               <div class="timeline-date-horizontal">2021.07 ~ 2021.12</div>
-              <div class="timeline-title-horizontal">JAVA 서비스개발자 양성과정</div>
+              <div class="timeline-title-horizontal">
+                JAVA 서비스개발자 양성과정
+              </div>
               <div class="timeline-org-horizontal">KOSMO</div>
-              <div class="timeline-content-horizontal">java, spring, python 개발 습득 (6개월)</div>
+              <div class="timeline-content-horizontal">
+                java, spring, python 개발 습득 (6개월)
+              </div>
             </div>
             <div class="timeline-item-horizontal">
               <div class="timeline-date-horizontal">2024.05 ~ 2024.07</div>
               <div class="timeline-title-horizontal">블록체인 중급과정</div>
               <div class="timeline-org-horizontal">수도권ICT 이노베이션</div>
-              <div class="timeline-content-horizontal">블록체인 메인넷 개발 습득 (160시간)</div>
+              <div class="timeline-content-horizontal">
+                블록체인 메인넷 개발 습득 (160시간)
+              </div>
             </div>
             <div class="timeline-item-horizontal">
               <div class="timeline-date-horizontal">2025.08 ~ 2025.12</div>
               <div class="timeline-title-horizontal">고려대학교 SW아카데미</div>
               <div class="timeline-org-horizontal">고려대학교</div>
-              <div class="timeline-content-horizontal">AI 모델 탐구 및 적용 습득 (640시간)</div>
+              <div class="timeline-content-horizontal">
+                AI 모델 탐구 및 적용 습득 (640시간)
+              </div>
             </div>
           </div>
         </div>
 
         <div class="container list-container">
           <h3 id="certification">CERTIFICATION</h3>
-          <div class="row clearfix layout">
-            <div class="col-xs-12 col-sm-4 col-md-3 details">
+          <div class="certification-horizontal">
+            <div class="certification-item">
               <h4>정보처리기사</h4>
               <p>산업관리공단</p>
               <p>2022.11.25</p>
             </div>
-            <div class="col-xs-12 col-sm-8 col-md-9 content"></div>
-          </div>
-          <div class="row clearfix layout">
-            <div class="col-xs-12 col-sm-4 col-md-3 details">
+            <div class="certification-item">
               <h4>도시계획기사</h4>
               <p>산업관리공단</p>
               <p>2021.12.24</p>
             </div>
-            <div class="col-xs-12 col-sm-8 col-md-9 content"></div>
           </div>
         </div>
 
