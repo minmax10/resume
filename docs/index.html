@@ -174,14 +174,16 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        align-items: flex-start;
         position: relative;
-        padding: 40px 0 20px 0;
+        padding: 50px 20px 30px 20px;
         margin: 20px 0;
         overflow-x: auto;
         background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 50%, #f5f5f5 100%);
         border: 2px solid #000;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+        gap: 10px;
       }
       .timeline-horizontal::before {
         content: "";
@@ -213,13 +215,15 @@
       }
       .timeline-item-horizontal {
         position: relative;
-        flex: 1;
-        min-width: 120px;
-        max-width: 200px;
+        flex: 0 1 auto;
+        min-width: 140px;
+        max-width: 220px;
         text-align: center;
-        padding: 0 10px;
+        padding: 0 15px;
         z-index: 2;
         transition: transform 0.3s ease;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
       }
       .timeline-item-horizontal:hover {
         transform: translateY(-5px);
@@ -241,31 +245,39 @@
       .timeline-date-horizontal {
         font-weight: bold;
         color: #000;
-        font-size: 0.85rem;
-        margin-bottom: 10px;
+        font-size: 0.9rem;
+        margin-bottom: 12px;
         white-space: nowrap;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         letter-spacing: 0.5px;
+        line-height: 1.2;
       }
       .timeline-title-horizontal {
-        font-size: 1rem;
+        font-size: 1.05rem;
         font-weight: bold;
-        margin: 35px 0 5px 0;
-        line-height: 1.3;
+        margin: 35px 0 8px 0;
+        line-height: 1.4;
         color: #000;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
       }
       .timeline-org-horizontal {
         color: #333;
-        font-size: 0.85rem;
-        margin: 5px 0;
+        font-size: 0.9rem;
+        margin: 6px 0;
         font-weight: 500;
+        line-height: 1.3;
+        word-wrap: break-word;
       }
       .timeline-content-horizontal {
-        margin-top: 8px;
+        margin-top: 10px;
         color: #444;
-        font-size: 0.85rem;
-        line-height: 1.4;
+        font-size: 0.88rem;
+        line-height: 1.5;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
       }
       .certification-horizontal {
         display: flex;
@@ -707,7 +719,7 @@
               <p>금융결제원</p>
             </div>
             <div class="col-xs-12 col-sm-8 col-md-9 content">
-              <p>금융결제원 SI 업무 수행 (2025.01~2025.6)</p>
+              <p>금융결제원 SI 업무 수행</p>
             </div>
           </div>
         </div>
