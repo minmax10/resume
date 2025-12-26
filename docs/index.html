@@ -170,6 +170,72 @@
         margin-top: 8px;
         color: #555;
       }
+      .timeline-horizontal {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+        padding: 40px 0 20px 0;
+        margin: 20px 0;
+        overflow-x: auto;
+      }
+      .timeline-horizontal::before {
+        content: "";
+        position: absolute;
+        top: 30px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #333;
+        z-index: 1;
+      }
+      .timeline-item-horizontal {
+        position: relative;
+        flex: 1;
+        min-width: 120px;
+        max-width: 200px;
+        text-align: center;
+        padding: 0 10px;
+        z-index: 2;
+      }
+      .timeline-item-horizontal::before {
+        content: "";
+        position: absolute;
+        top: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: #333;
+        border: 3px solid #fff;
+        box-shadow: 0 0 0 2px #333;
+        z-index: 3;
+      }
+      .timeline-date-horizontal {
+        font-weight: bold;
+        color: #666;
+        font-size: 0.85rem;
+        margin-bottom: 10px;
+        white-space: nowrap;
+      }
+      .timeline-title-horizontal {
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 35px 0 5px 0;
+        line-height: 1.3;
+      }
+      .timeline-org-horizontal {
+        color: #666;
+        font-size: 0.85rem;
+        margin: 5px 0;
+      }
+      .timeline-content-horizontal {
+        margin-top: 8px;
+        color: #555;
+        font-size: 0.85rem;
+        line-height: 1.4;
+      }
       .details p {
         margin: 5px 0;
         color: #666;
@@ -270,37 +336,37 @@
 
         <div class="container list-container">
           <h3 id="education">EDUCATION</h3>
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-date">1996</div>
-              <div class="timeline-title">Birth</div>
+          <div class="timeline-horizontal">
+            <div class="timeline-item-horizontal">
+              <div class="timeline-date-horizontal">1996</div>
+              <div class="timeline-title-horizontal">Birth</div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-date">2005 ~ 2010</div>
-              <div class="timeline-title">중국-상하이</div>
-              <div class="timeline-content">6년 - 부모님 직장/유학</div>
+            <div class="timeline-item-horizontal">
+              <div class="timeline-date-horizontal">2005 ~ 2010</div>
+              <div class="timeline-title-horizontal">중국-상하이</div>
+              <div class="timeline-content-horizontal">6년 - 부모님 직장/유학</div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-date">2017.03 ~ 2022.02</div>
-              <div class="timeline-title">University Of Seoul</div>
+            <div class="timeline-item-horizontal">
+              <div class="timeline-date-horizontal">2017.03 ~ 2022.02</div>
+              <div class="timeline-title-horizontal">University Of Seoul</div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-date">2021.07 ~ 2021.12</div>
-              <div class="timeline-title">JAVA 서비스개발자 양성과정</div>
-              <div class="timeline-org">KOSMO</div>
-              <div class="timeline-content">java, spring, python 개발 습득 (6개월)</div>
+            <div class="timeline-item-horizontal">
+              <div class="timeline-date-horizontal">2021.07 ~ 2021.12</div>
+              <div class="timeline-title-horizontal">JAVA 서비스개발자 양성과정</div>
+              <div class="timeline-org-horizontal">KOSMO</div>
+              <div class="timeline-content-horizontal">java, spring, python 개발 습득 (6개월)</div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-date">2024.05 ~ 2024.07</div>
-              <div class="timeline-title">블록체인 중급과정</div>
-              <div class="timeline-org">수도권ICT 이노베이션</div>
-              <div class="timeline-content">블록체인 메인넷 개발 습득 (160시간)</div>
+            <div class="timeline-item-horizontal">
+              <div class="timeline-date-horizontal">2024.05 ~ 2024.07</div>
+              <div class="timeline-title-horizontal">블록체인 중급과정</div>
+              <div class="timeline-org-horizontal">수도권ICT 이노베이션</div>
+              <div class="timeline-content-horizontal">블록체인 메인넷 개발 습득 (160시간)</div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-date">2025.08 ~ 2025.12</div>
-              <div class="timeline-title">고려대학교 SW아카데미</div>
-              <div class="timeline-org">고려대학교</div>
-              <div class="timeline-content">AI 모델 탐구 및 적용 습득 (640시간)</div>
+            <div class="timeline-item-horizontal">
+              <div class="timeline-date-horizontal">2025.08 ~ 2025.12</div>
+              <div class="timeline-title-horizontal">고려대학교 SW아카데미</div>
+              <div class="timeline-org-horizontal">고려대학교</div>
+              <div class="timeline-content-horizontal">AI 모델 탐구 및 적용 습득 (640시간)</div>
             </div>
           </div>
         </div>
