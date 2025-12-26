@@ -170,6 +170,12 @@
         margin-top: 8px;
         color: #555;
       }
+      .timeline-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin: 20px 0;
+      }
       .timeline-horizontal {
         display: flex;
         flex-wrap: wrap;
@@ -177,7 +183,6 @@
         align-items: flex-start;
         position: relative;
         padding: 50px 20px 30px 20px;
-        margin: 20px 0;
         overflow-x: auto;
         background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 50%, #f5f5f5 100%);
         border: 2px solid #000;
@@ -195,6 +200,19 @@
         background: linear-gradient(to right, transparent 0%, #000 10%, #000 90%, transparent 100%);
         z-index: 1;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+      .timeline-row-2 {
+        padding-top: 60px;
+      }
+      .timeline-row-2::before {
+        top: 90px;
+      }
+      .timeline-item-overlap {
+        margin-top: -20px;
+        z-index: 4;
+      }
+      .timeline-item-overlap::before {
+        top: 44px;
       }
       .timeline-horizontal::after {
         content: "";
@@ -399,46 +417,50 @@
 
         <div class="container list-container">
           <h3 id="education">TIMELINE</h3>
-          <div class="timeline-horizontal">
-            <div class="timeline-item-horizontal">
-              <div class="timeline-date-horizontal">1996</div>
-              <div class="timeline-title-horizontal">Birth</div>
+          <div class="timeline-container">
+            <div class="timeline-horizontal">
+              <div class="timeline-item-horizontal">
+                <div class="timeline-date-horizontal">1996</div>
+                <div class="timeline-title-horizontal">Birth</div>
+              </div>
+              <div class="timeline-item-horizontal">
+                <div class="timeline-date-horizontal">2005 ~ 2010</div>
+                <div class="timeline-title-horizontal">중국-상하이</div>
+                <div class="timeline-content-horizontal">6년 - 부모님 직장/유학</div>
+              </div>
+              <div class="timeline-item-horizontal">
+                <div class="timeline-date-horizontal">2017.03 ~ 2022.02</div>
+                <div class="timeline-title-horizontal">University Of Seoul</div>
+                <div class="timeline-org-horizontal">도시공학과</div>
+              </div>
+              <div class="timeline-item-horizontal">
+                <div class="timeline-date-horizontal">2021.07 ~ 2021.12</div>
+                <div class="timeline-title-horizontal">JAVA 서비스개발자 양성과정</div>
+                <div class="timeline-org-horizontal">KOSMO</div>
+                <div class="timeline-content-horizontal">java, spring, python 개발 습득 (6개월)</div>
+              </div>
             </div>
-            <div class="timeline-item-horizontal">
-              <div class="timeline-date-horizontal">2005 ~ 2010</div>
-              <div class="timeline-title-horizontal">중국-상하이</div>
-              <div class="timeline-content-horizontal">6년 - 부모님 직장/유학</div>
-            </div>
-            <div class="timeline-item-horizontal">
-              <div class="timeline-date-horizontal">2017.03 ~ 2022.02</div>
-              <div class="timeline-title-horizontal">University Of Seoul</div>
-              <div class="timeline-org-horizontal">도시공학과</div>
-            </div>
-            <div class="timeline-item-horizontal">
-              <div class="timeline-date-horizontal">2021.07 ~ 2021.12</div>
-              <div class="timeline-title-horizontal">JAVA 서비스개발자 양성과정</div>
-              <div class="timeline-org-horizontal">KOSMO</div>
-              <div class="timeline-content-horizontal">java, spring, python 개발 습득 (6개월)</div>
-            </div>
-            <div class="timeline-item-horizontal">
-              <div class="timeline-date-horizontal">2021.12 ~ 2024.12</div>
-              <div class="timeline-title-horizontal">KDB산업은행</div>
-            </div>
-            <div class="timeline-item-horizontal">
-              <div class="timeline-date-horizontal">2024.05 ~ 2024.07</div>
-              <div class="timeline-title-horizontal">블록체인 중급과정</div>
-              <div class="timeline-org-horizontal">수도권ICT 이노베이션</div>
-              <div class="timeline-content-horizontal">블록체인 메인넷 개발 습득 (160시간)</div>
-            </div>
-            <div class="timeline-item-horizontal">
-              <div class="timeline-date-horizontal">2025.01 ~ 2025.06</div>
-              <div class="timeline-title-horizontal">금융결제원</div>
-            </div>
-            <div class="timeline-item-horizontal">
-              <div class="timeline-date-horizontal">2025.08 ~ 2025.12</div>
-              <div class="timeline-title-horizontal">고려대학교 SW아카데미</div>
-              <div class="timeline-org-horizontal">고려대학교</div>
-              <div class="timeline-content-horizontal">AI 모델 탐구 및 적용 습득 (640시간)</div>
+            <div class="timeline-horizontal timeline-row-2">
+              <div class="timeline-item-horizontal">
+                <div class="timeline-date-horizontal">2021.12 ~ 2024.12</div>
+                <div class="timeline-title-horizontal">KDB산업은행</div>
+              </div>
+              <div class="timeline-item-horizontal timeline-item-overlap">
+                <div class="timeline-date-horizontal">2024.05 ~ 2024.07</div>
+                <div class="timeline-title-horizontal">블록체인 중급과정</div>
+                <div class="timeline-org-horizontal">수도권ICT 이노베이션</div>
+                <div class="timeline-content-horizontal">블록체인 메인넷 개발 습득 (160시간)</div>
+              </div>
+              <div class="timeline-item-horizontal">
+                <div class="timeline-date-horizontal">2025.01 ~ 2025.06</div>
+                <div class="timeline-title-horizontal">금융결제원</div>
+              </div>
+              <div class="timeline-item-horizontal">
+                <div class="timeline-date-horizontal">2025.08 ~ 2025.12</div>
+                <div class="timeline-title-horizontal">고려대학교 SW아카데미</div>
+                <div class="timeline-org-horizontal">고려대학교</div>
+                <div class="timeline-content-horizontal">AI 모델 탐구 및 적용 습득 (640시간)</div>
+              </div>
             </div>
           </div>
         </div>
