@@ -13,120 +13,201 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap");
       * {
         box-sizing: border-box;
       }
       body {
-        font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont,
+        font-family: "Roboto", "Noto Sans KR", -apple-system, BlinkMacSystemFont,
           "Segoe UI", sans-serif;
         margin: 0;
         padding: 0;
+        background-color: #ffffff;
+        color: #333;
+        line-height: 1.6;
       }
       .page-content {
-        padding: 20px 0;
-      }
-      .container {
+        padding: 40px 20px;
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 15px;
       }
-      .header-container {
-        margin-bottom: 30px;
-      }
-      .header-left h1 {
-        font-size: 2.5rem;
-        margin: 0;
-        font-weight: bold;
-      }
-      .header-left h2 {
-        font-size: 1.5rem;
-        margin: 10px 0 0 0;
-        color: #666;
-        font-weight: normal;
-      }
-      .header-right {
-        text-align: right;
+      
+      /* Header Styles */
+      .header-section {
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        gap: 8px;
-      }
-      .header-right p {
-        margin: 0;
-        font-size: 0.95rem;
-        line-height: 1.6;
-        color: #444;
-      }
-      .header-right p strong {
-        display: inline-block;
-        min-width: 80px;
-        font-weight: 600;
-        color: #222;
-      }
-      .icons {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 20px 0;
-      }
-      .icons li {
-        display: inline-block;
-        margin: 0 5px;
-      }
-      .button {
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        text-align: center;
-        border-radius: 50%;
-        background-color: #333;
-        color: #fff;
-        text-decoration: none;
-        transition: background-color 0.3s;
-      }
-      .button:hover {
-        background-color: #555;
-        color: #fff;
-      }
-      .intro-container {
+        align-items: flex-start;
         margin-bottom: 40px;
+        padding-bottom: 30px;
+        border-bottom: 2px solid #c9a961;
       }
-      .intro-container h3 {
-        font-size: 1.8rem;
-        margin-bottom: 20px;
-        border-bottom: 2px solid #333;
-        padding-bottom: 10px;
+      .profile-img-container {
+        margin-right: 40px;
+        flex-shrink: 0;
       }
       .profile-img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #1a237e;
         display: block;
-        width: 200px;
-        height: 200px;
-        background-size: cover;
-        background-position: center;
-        border-radius: 8px;
-        border: 3px solid #ddd;
       }
-      .list-container {
-        margin-bottom: 40px;
+      .header-info {
+        flex: 1;
       }
-      .list-container h3 {
-        font-size: 1.8rem;
-        margin-bottom: 20px;
-        border-bottom: 2px solid #333;
+      .name-section {
+        margin-bottom: 15px;
+      }
+      .first-name {
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: #1a237e;
+        margin: 0;
+        line-height: 1;
+        letter-spacing: 2px;
+      }
+      .last-name {
+        font-size: 2.8rem;
+        font-weight: 400;
+        color: #1a237e;
+        margin: 0;
+        line-height: 1;
         padding-bottom: 10px;
+        border-bottom: 2px solid #c9a961;
+        display: inline-block;
       }
-      .layout {
-        margin-bottom: 30px;
+      .job-title {
+        font-size: 1.1rem;
+        color: #c9a961;
+        letter-spacing: 3px;
+        margin: 15px 0 20px 0;
+        text-transform: uppercase;
+        font-weight: 400;
       }
-      .details h4 {
-        font-size: 1.3rem;
-        margin: 0 0 10px 0;
-        font-weight: bold;
+      .summary {
+        color: #555;
+        font-size: 0.95rem;
+        line-height: 1.8;
+        max-width: 800px;
       }
-      #education .details h4 {
-        white-space: normal;
+      
+      /* Two Column Layout */
+      .resume-container {
+        display: grid;
+        grid-template-columns: 350px 1fr;
+        gap: 40px;
+        margin-top: 30px;
       }
+      
+      /* Left Column Styles */
+      .left-column {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+      }
+      
+      /* Section Titles */
+      .section-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #1a237e;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #e0e0e0;
+      }
+      
+      /* Contact Section */
+      .contact-item {
+        display: flex;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px solid #f0f0f0;
+      }
+      .contact-item:last-child {
+        border-bottom: none;
+      }
+      .contact-icon {
+        width: 20px;
+        margin-right: 15px;
+        color: #1a237e;
+        font-size: 1rem;
+        flex-shrink: 0;
+      }
+      .contact-text {
+        color: #555;
+        font-size: 0.9rem;
+        flex: 1;
+      }
+      .contact-text a {
+        color: #555;
+        text-decoration: none;
+      }
+      .contact-text a:hover {
+        color: #1a237e;
+      }
+      
+      /* Education Section */
+      .education-item {
+        margin-bottom: 15px;
+      }
+      .education-title {
+        font-weight: 600;
+        color: #1a237e;
+        font-size: 0.95rem;
+        margin-bottom: 5px;
+      }
+      .education-details {
+        color: #666;
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+      
+      /* Certification Section */
+      .certification-item {
+        margin-bottom: 15px;
+      }
+      .cert-title {
+        font-weight: 600;
+        color: #1a237e;
+        font-size: 0.95rem;
+        margin-bottom: 3px;
+      }
+      .cert-org {
+        color: #666;
+        font-size: 0.9rem;
+      }
+      .cert-date {
+        color: #666;
+        font-size: 0.85rem;
+        margin-top: 3px;
+      }
+      
+      /* Skills Section */
+      .skill-category {
+        margin-bottom: 20px;
+      }
+      .skill-category-title {
+        font-weight: 600;
+        color: #1a237e;
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+      }
+      .skill-items {
+        color: #666;
+        font-size: 0.9rem;
+        line-height: 1.8;
+      }
+      
+      /* Right Column Styles */
+      .right-column {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+      }
+      
+      /* Timeline Styles */
       .timeline {
         position: relative;
         padding-left: 30px;
@@ -135,760 +216,422 @@
       .timeline::before {
         content: "";
         position: absolute;
-        left: 8px;
+        left: 0;
         top: 0;
         bottom: 0;
         width: 2px;
-        background: #333;
+        background: #c9a961;
       }
       .timeline-item {
         position: relative;
-        margin-bottom: 30px;
-        padding-left: 20px;
+        margin-bottom: 35px;
+        padding-left: 25px;
       }
       .timeline-item::before {
         content: "";
         position: absolute;
-        left: -22px;
+        left: -29px;
         top: 5px;
-        width: 12px;
-        height: 12px;
+        width: 14px;
+        height: 14px;
         border-radius: 50%;
-        background: #333;
-        border: 2px solid #fff;
-        box-shadow: 0 0 0 2px #333;
+        background: #1a237e;
+        border: 3px solid #ffffff;
+        box-shadow: 0 0 0 2px #1a237e;
       }
       .timeline-date {
-        font-weight: bold;
-        color: #666;
+        font-weight: 600;
+        color: #c9a961;
         font-size: 0.9rem;
-        margin-bottom: 5px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
       }
       .timeline-title {
-        font-size: 1.2rem;
-        font-weight: bold;
-        margin: 5px 0;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #1a237e;
+        margin: 8px 0 5px 0;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
       }
-      .timeline-award {
-        color: #d9534f;
-        font-weight: bold;
-        margin: 5px 0;
-      }
-      .timeline-org {
+      .timeline-company {
         color: #666;
-        font-size: 0.9rem;
-        margin: 5px 0;
+        font-size: 0.95rem;
+        margin-bottom: 10px;
       }
       .timeline-content {
-        margin-top: 8px;
         color: #555;
-      }
-      .timeline-horizontal {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-        position: relative;
-        padding: 50px 20px 30px 20px;
-        margin: 20px 0;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        background: #ffffff;
-        border: 2px solid #000;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
-          inset 0 1px 0 rgba(255, 255, 255, 0.5);
-        gap: 15px;
-        min-width: 100%;
-      }
-      .timeline-horizontal::before {
-        content: "";
-        position: absolute;
-        top: 30px;
-        left: 0;
-        right: 0;
-        height: 3px;
-        background: linear-gradient(
-          to right,
-          transparent 0%,
-          #000 10%,
-          #000 90%,
-          transparent 100%
-        );
-        z-index: 1;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      }
-      .work-timeline-horizontal {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-        position: relative;
-        padding: 50px 20px 30px 20px;
-        margin: 20px 0;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        background: linear-gradient(
-          135deg,
-          #f5f5f5 0%,
-          #ffffff 50%,
-          #f5f5f5 100%
-        );
-        border: 2px solid #000;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
-          inset 0 1px 0 rgba(255, 255, 255, 0.5);
-        gap: 15px;
-        min-width: 100%;
-      }
-      .work-timeline-horizontal::before {
-        content: "";
-        position: absolute;
-        top: 30px;
-        left: 0;
-        right: 0;
-        height: 3px;
-        background: linear-gradient(
-          to right,
-          transparent 0%,
-          #000 10%,
-          #000 90%,
-          transparent 100%
-        );
-        z-index: 1;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      }
-      .work-timeline-item {
-        position: relative;
-        flex: 1 1 auto;
-        min-width: 140px;
-        max-width: 180px;
-        text-align: center;
-        padding: 0 8px;
-        z-index: 2;
-        transition: transform 0.3s ease;
-      }
-      .work-timeline-item:hover {
-        transform: translateY(-5px);
-      }
-      .work-timeline-item::before {
-        content: "";
-        position: absolute;
-        top: 24px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        background: #000;
-        border: 4px solid #fff;
-        box-shadow: 0 0 0 2px #000, 0 2px 8px rgba(0, 0, 0, 0.3);
-        z-index: 3;
-      }
-      .work-timeline-title {
-        font-weight: bold;
-        font-size: 1.05rem;
-        color: #000;
-        margin: 35px 0 8px 0;
-        line-height: 1.4;
-        word-wrap: break-word;
-      }
-      .work-timeline-date {
-        font-weight: bold;
         font-size: 0.9rem;
-        color: #000;
-        margin-bottom: 12px;
-        white-space: nowrap;
-        word-wrap: break-word;
+        line-height: 1.7;
       }
-      .timeline-horizontal::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: repeating-linear-gradient(
-          45deg,
-          transparent,
-          transparent 10px,
-          rgba(0, 0, 0, 0.02) 10px,
-          rgba(0, 0, 0, 0.02) 20px
-        );
-        border-radius: 8px;
-        pointer-events: none;
-      }
-      .timeline-item-horizontal {
-        position: relative;
-        flex: 1 1 auto;
-        min-width: 140px;
-        max-width: 180px;
-        text-align: center;
-        padding: 0 8px;
-        z-index: 2;
-        transition: transform 0.3s ease;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-      }
-      .timeline-item-horizontal:hover {
-        transform: translateY(-5px);
-      }
-      .timeline-item-horizontal::before {
-        content: "";
-        position: absolute;
-        top: 24px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        background: #000;
-        border: 4px solid #fff;
-        box-shadow: 0 0 0 2px #000, 0 2px 8px rgba(0, 0, 0, 0.3);
-        z-index: 3;
-      }
-      .timeline-date-horizontal {
-        font-weight: bold;
-        color: #000;
-        font-size: 0.9rem;
-        margin-bottom: 12px;
-        white-space: nowrap;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-        letter-spacing: 0.5px;
-        line-height: 1.2;
-      }
-      .timeline-title-horizontal {
-        font-size: 1.05rem;
-        font-weight: bold;
-        margin: 35px 0 8px 0;
-        line-height: 1.4;
-        color: #000;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        hyphens: auto;
-      }
-      .timeline-org-horizontal {
-        color: #333;
-        font-size: 0.9rem;
-        margin: 6px 0;
-        font-weight: 500;
-        line-height: 1.3;
-        word-wrap: break-word;
-      }
-      .timeline-content-horizontal {
-        margin-top: 10px;
-        color: #444;
-        font-size: 0.88rem;
-        line-height: 1.5;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-      }
-      .certification-horizontal {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        justify-content: flex-start;
-        margin: 20px 0;
-      }
-      .certification-item {
-        flex: 0 1 auto;
-        min-width: 200px;
-      }
-      .certification-item h4 {
-        font-size: 1.2rem;
-        font-weight: bold;
-        margin-bottom: 5px;
-      }
-      .certification-item p {
-        margin: 5px 0;
-        color: #666;
-      }
-      .details p {
-        margin: 5px 0;
-        color: #666;
-      }
-      .content p {
-        margin: 10px 0;
-        line-height: 1.8;
-      }
-      .content ul {
+      .timeline-content ul {
         margin: 10px 0;
         padding-left: 20px;
       }
-      .content li {
+      .timeline-content li {
         margin: 8px 0;
-        line-height: 1.6;
       }
-      .footer-container {
-        margin-top: 40px;
-        padding-top: 20px;
-        border-top: 1px solid #ddd;
-        text-align: center;
-        color: #666;
+      
+      /* Award Styles */
+      .timeline-award {
+        font-weight: 600;
+        color: #1a237e;
+        font-size: 1rem;
+        text-transform: uppercase;
+        margin: 8px 0 5px 0;
+        letter-spacing: 0.5px;
       }
-      @media (max-width: 768px) {
-        .header-left,
-        .header-right {
+      .timeline-award-desc {
+        color: #555;
+        font-size: 0.9rem;
+        margin-top: 5px;
+      }
+      
+      /* Responsive */
+      @media (max-width: 968px) {
+        .resume-container {
+          grid-template-columns: 1fr;
+        }
+        .header-section {
+          flex-direction: column;
+          align-items: center;
           text-align: center;
+        }
+        .profile-img-container {
+          margin-right: 0;
+          margin-bottom: 30px;
+        }
+        .first-name,
+        .last-name {
+          font-size: 2.5rem;
         }
       }
     </style>
   </head>
   <body>
     <main class="page-content">
-      <div class="wrapper">
-        <div class="container header-container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-8 header-left">
-              <h1>Hwang SunWoo</h1>
-              <h2>AML DEVOPS</h2>
+      <!-- Header Section -->
+      <div class="header-section">
+        <div class="profile-img-container">
+          <img
+            src="asset/profile.jpg"
+            alt="Hwang SunWoo"
+            class="profile-img"
+            onerror="this.style.display='none'"
+          />
+        </div>
+        <div class="header-info">
+          <div class="name-section">
+            <h1 class="first-name">HWANG</h1>
+            <h2 class="last-name">SUNWOO</h2>
+          </div>
+          <div class="job-title">AML DEVOPS</div>
+          <div class="summary">
+            Experienced AML/STR DEVOPS professional with 3+ years of expertise
+            in domestic and international Anti-Money Laundering operations.
+            Proven track record in SQL Query-based STR/CTR Rule operations,
+            compliance verification, and cross-functional collaboration for
+            schedule, quality, and risk management. Skilled in standardizing and
+            simplifying AML monitoring processes, implementing container-based
+            real-time monitoring systems with Elasticsearch, and leading
+            projects from requirements definition to system implementation.
+          </div>
+        </div>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="resume-container">
+        <!-- Left Column -->
+        <div class="left-column">
+          <!-- Contact Section -->
+          <div>
+            <h3 class="section-title">CONTACT</h3>
+            <div class="contact-item">
+              <i class="fas fa-phone contact-icon"></i>
+              <span class="contact-text">010-8413-8898</span>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 header-right">
-              <p>
-                <strong>Name:</strong> Hwang SunWoo
-              </p>
-              <p>
-                <strong>Email:</strong> <a href="mailto:sweddie@naver.com" style="color: #0066cc; text-decoration: none;">sweddie@naver.com</a>
-              </p>
-              <p>
-                <strong>Phone:</strong> 010-8413-8898
-              </p>
-              <p>
-                <strong>Age:</strong> 30
-              </p>
-              <p>
-                <strong>Education:</strong> University of Seoul<br />
-                <span style="margin-left: 80px; color: #666; font-size: 0.9rem;">B.S. in Urban Planning</span>
-              </p>
+            <div class="contact-item">
+              <i class="fas fa-envelope contact-icon"></i>
+              <span class="contact-text"
+                ><a href="mailto:sweddie@naver.com">sweddie@naver.com</a></span
+              >
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-birthday-cake contact-icon"></i>
+              <span class="contact-text">Age: 30</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt contact-icon"></i>
+              <span class="contact-text">Seoul, South Korea</span>
+            </div>
+          </div>
+
+          <!-- Education Section -->
+          <div>
+            <h3 class="section-title">EDUCATION</h3>
+            <div class="education-item">
+              <div class="education-title">UNIVERSITY OF SEOUL</div>
+              <div class="education-details">
+                Bachelor of Science in Urban Planning, 2017-2022
+              </div>
+            </div>
+            <div class="education-item">
+              <div class="education-title">KOREA UNIVERSITY AI SW ACADEMY</div>
+              <div class="education-details">
+                AI Model Exploration and Application (640 hours), 2025.08-2025.12
+              </div>
+            </div>
+            <div class="education-item">
+              <div class="education-title">JAVA SERVICE DEVELOPER</div>
+              <div class="education-details">
+                KOSMO Training Program (Java, Spring, Python), 2021.07-2021.12
+              </div>
+            </div>
+            <div class="education-item">
+              <div class="education-title">BLOCKCHAIN INTERMEDIATE</div>
+              <div class="education-details">
+                Seoul ICT Innovation Blockchain Mainnet Development (160 hours),
+                2024.05-2024.07
+              </div>
+            </div>
+          </div>
+
+          <!-- Certification Section -->
+          <div>
+            <h3 class="section-title">CERTIFICATION</h3>
+            <div class="certification-item">
+              <div class="cert-title">Urban Planning Engineer</div>
+              <div class="cert-org">Korea Industrial Complex Corporation</div>
+              <div class="cert-date">2021.12.24</div>
+            </div>
+            <div class="certification-item">
+              <div class="cert-title">Information Processing Engineer</div>
+              <div class="cert-org">Korea Industrial Complex Corporation</div>
+              <div class="cert-date">2022.11.25</div>
+            </div>
+            <div class="certification-item">
+              <div class="cert-title">TOPCIT (Top 1%)</div>
+              <div class="cert-org">Score: 750</div>
+              <div class="cert-date">2025.12.1</div>
+            </div>
+          </div>
+
+          <!-- Skills Section -->
+          <div>
+            <h3 class="section-title">SKILLS</h3>
+            <div class="skill-category">
+              <div class="skill-category-title">Programming Languages:</div>
+              <div class="skill-items">C, Java, Python</div>
+            </div>
+            <div class="skill-category">
+              <div class="skill-category-title">Frameworks:</div>
+              <div class="skill-items">Spring Boot, Spring Framework</div>
+            </div>
+            <div class="skill-category">
+              <div class="skill-category-title">Database:</div>
+              <div class="skill-items">SQL, NoSQL, Elasticsearch</div>
+            </div>
+            <div class="skill-category">
+              <div class="skill-category-title">AML/Compliance:</div>
+              <div class="skill-items">
+                STR/CTR Rule Operations, AML Monitoring Systems, Compliance
+                Verification, Risk Management
+              </div>
+            </div>
+            <div class="skill-category">
+              <div class="skill-category-title">Infrastructure:</div>
+              <div class="skill-items">
+                Container-based Architecture, Real-time Monitoring Systems, ETL
+                Architecture
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="container intro-container">
-          <h3 id="about-me">INTRODUCE</h3>
-          <div class="row clearfix">
-            <div class="col-xs-12 col-sm-4 col-md-3">
-              <span
-                class="profile-img"
-                style="background-image: url('asset/profile.jpg')"
-              ></span>
-            </div>
-            <div class="col-xs-12 col-sm-8 col-md-9">
-              <p>
-                금융권 국/내외 AML 전담[총3년]경험을 보유한 AML/STR DEVOPS
-                입니다.
-              </p>
-              <p>
-                <strong>KDB산업은행</strong><br />
-                AML 전담 경험 (2021.12~2024.12) 보유, SQL Query 기반 STR/CTR
-                Rule 운영 및 정합성 검증 경험을 보유하고 있습니다.
-              </p>
-              <p>
-                STR 운영 프로세스 표준화/단순화 관점으로 전산 요건 정의,
-                테스트(UAT), 로직 개선, 대용량 쿼리 튜닝 참여 경험이 있으며,
-                해외 규제 기반 국외 AML 모니터링 체계 도입 경험(컨테이너 구조 +
-                Elasticsearch 기반 실시간 모니터링)을 보유하고 있습니다.
-              </p>
-              <p>
-                유관부서(개발/운영/컴플라이언스/현업)와의 협업을 통한
-                일정/품질/리스크 관리에 강점을 가지고 있습니다.
-              </p>
-              <p>
-                <strong>금융결제원</strong><br />
-                금융결제원 SI 업무 수행 경험(2025.01~2025.6)을 보유하고
-                있습니다.
-              </p>
-              <p>
-                <strong>AI-Based 2D Indoor Relighting System 논문</strong><br />
-                This Interior-design platforms are rapidly adopting AR and 3D
-                rendering, but lighting previews in common online simulators and
-                AR services remain hard to trust: optical effects are poorly
-                modeled and results often degrade into simple image overlays,
-                limiting users' ability to experience a room's "atmosphere"
-                before purchase. To bridge this realism gap, we propose Lumiply,
-                an AI-based 2D indoor relighting assistant that performs
-                luminaire-grounded relighting—transferring illumination to the
-                true fixture location rather than applying a global style
-                change—while supporting multi-color lighting for practical mood
-                exploration. Built on a latent-intrinsics + diffusion backbone,
-                this study targets key failure modes of prior light-transfer
-                systems (small/occluded light-source detection, weak
-                color-change capture, and inaccurate transfer onto the target
-                luminaire) by fine-tuning U-Net cross-attention to specialize on
-                the selected lamp and training a ControlNet + color adaptor for
-                stable color injection. Compared to a prior study, Lumiply
-                achieves approximately 2.5× better RMSE and LPIPS and about 1.2×
-                higher SSIM, indicating superior content preservation and color
-                reflectance relative to the baseline. We expect our findings to
-                reduce trial-and-error in lighting selection and provide a more
-                faithful, lamp-aware preview layer for future AR-ready interior
-                experiences.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="container list-container">
-          <h3 id="skill">SKILL</h3>
-          <p style="font-size: 1.2rem; line-height: 2">
-            <span style="margin-right: 15px">🔵 C</span>
-            <span style="margin-right: 15px">☕ Java</span>
-            <span style="margin-right: 15px">🌱 Spring</span>
-            <span style="margin-right: 15px">🐍 Python</span>
-            <span style="margin-right: 15px">💾 SQL</span>
-            <span>🗄️ non-sql</span>
-          </p>
-        </div>
-
-        <div class="container list-container">
-          <h3 id="education">TIMELINE</h3>
-          <div class="timeline-horizontal">
-            <div class="timeline-item-horizontal">
-              <div class="timeline-date-horizontal">1996</div>
-              <div class="timeline-title-horizontal">Birth</div>
-            </div>
-            <div class="timeline-item-horizontal">
-              <div class="timeline-date-horizontal">2005 ~ 2010</div>
-              <div class="timeline-title-horizontal">중국-상하이</div>
-              <div class="timeline-content-horizontal">
-                6년 - 부모님 직장/유학
-              </div>
-            </div>
-            <div class="timeline-item-horizontal">
-              <div class="timeline-date-horizontal">2017.03 ~ 2022.02</div>
-              <div class="timeline-title-horizontal">University Of Seoul</div>
-              <div class="timeline-org-horizontal">도시공학과</div>
-            </div>
-            <div class="timeline-item-horizontal">
-              <div class="timeline-date-horizontal">2021.07 ~ 2021.12</div>
-              <div class="timeline-title-horizontal">
-                JAVA 서비스개발자 양성과정
-              </div>
-              <div class="timeline-org-horizontal">KOSMO</div>
-              <div class="timeline-content-horizontal">
-                java, spring, python 개발 습득 (6개월)
-              </div>
-            </div>
-            <div class="timeline-item-horizontal">
-              <div class="timeline-date-horizontal">2024.05 ~ 2024.07</div>
-              <div class="timeline-title-horizontal">블록체인 중급과정</div>
-              <div class="timeline-org-horizontal">수도권ICT 이노베이션</div>
-              <div class="timeline-content-horizontal">
-                블록체인 메인넷 개발 습득 (160시간)
-              </div>
-            </div>
-            <div class="timeline-item-horizontal">
-              <div class="timeline-date-horizontal">2025.08 ~ 2025.12</div>
-              <div class="timeline-title-horizontal">고려대학교 SW아카데미</div>
-              <div class="timeline-org-horizontal">고려대학교</div>
-              <div class="timeline-content-horizontal">
-                AI 모델 탐구 및 적용 습득 (640시간)
-              </div>
-            </div>
-          </div>
-          <div class="container list-container">
-            <h3>WORK TIMELINE</h3>
+        <!-- Right Column -->
+        <div class="right-column">
+          <!-- Experience Section -->
+          <div>
+            <h3 class="section-title">EXPERIENCE</h3>
             <div class="timeline">
               <div class="timeline-item">
-                <div class="timeline-date">2021.12 ~ 2024.12</div>
-                <div class="timeline-title">KDB산업은행</div>
+                <div class="timeline-date">2021.12 - 2024.12</div>
+                <div class="timeline-title">
+                  SENIOR AML OPERATIONS SPECIALIST
+                </div>
+                <div class="timeline-company">KDB Industrial Bank</div>
+                <div class="timeline-content">
+                  <strong>Domestic AML & WatchList System Operations</strong>
+                  <ul>
+                    <li>
+                      STR/CTR Operations: Systematically reorganized duplicate,
+                      conflicting, and over-detection sections of STR Rules,
+                      improving operational efficiency from 2 hours to 30
+                      minutes
+                    </li>
+                    <li>
+                      KOFIU Reporting Enhancement: Simplified reporting flow,
+                      reducing rejection/missing risk from 20% to 7%, and
+                      standardized reporting quality
+                    </li>
+                    <li>
+                      UI/Process Improvement: Reorganized workflow from STR case
+                      inquiry to submission, reducing input errors and review
+                      time
+                    </li>
+                    <li>
+                      Error/Exception Manual: Created troubleshooting manual and
+                      prevention guides, improving new staff onboarding
+                      efficiency
+                    </li>
+                  </ul>
+                  <strong>Overseas Transaction Monitoring</strong>
+                  <ul>
+                    <li>
+                      Led Sub-PL role in building new AML monitoring system
+                      based on overseas branch regulations
+                    </li>
+                    <li>
+                      Collaborated with foreign partners on documents,
+                      infrastructure, security, equipment specs, script
+                      development, MCI design, and ETL architecture
+                    </li>
+                    <li>
+                      Analyzed structural differences in container-based server
+                      + Elasticsearch environment to bridge gaps with existing
+                      systems
+                    </li>
+                    <li>
+                      Managed WBS separately to proactively coordinate
+                      schedule/risks, completing project on time
+                    </li>
+                    <li>
+                      Received Best Collaboration Award (first among new
+                      employees) for successful new business introduction
+                    </li>
+                  </ul>
+                  <strong>FDS / Transmission Logging Operations</strong>
+                  <ul>
+                    <li>
+                      Performed Rule-based monitoring and data
+                      refinement/extraction in real-time transaction anomaly
+                      detection (FDS)
+                    </li>
+                    <li>
+                      Established troubleshooting manual for errors/exceptions
+                      during operations
+                    </li>
+                    <li>
+                      Standardized cause/action/prevention criteria by symptom,
+                      improving reproducibility, response speed, and operational
+                      stability
+                    </li>
+                    <li>
+                      Monitored internal/external file transmission flows
+                      stably, providing audit and transaction verification data
+                      promptly
+                    </li>
+                  </ul>
+                </div>
               </div>
+
               <div class="timeline-item">
-                <div class="timeline-date">2025.01 ~ 2025.06</div>
-                <div class="timeline-title">금융결제원</div>
+                <div class="timeline-date">2025.01 - 2025.06</div>
+                <div class="timeline-title">SI PROJECT CONSULTANT</div>
+                <div class="timeline-company">Korea Financial Settlement
+                  Service</div>
+                <div class="timeline-content">
+                  <ul>
+                    <li>
+                      Analyzed and designed electronic payment guarantee service
+                      business
+                    </li>
+                    <li>
+                      Reviewed core service design and quality standards
+                    </li>
+                    <li>
+                      Expanded understanding of financial service SI and
+                      operations
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="container list-container">
-          <h3 id="certification">CERTIFICATION</h3>
-          <div class="certification-horizontal">
-            <div class="certification-item">
-              <h4>도시계획기사</h4>
-              <p>산업관리공단</p>
-              <p>2021.12.24</p>
-            </div>
-            <div class="certification-item">
-              <h4>정보처리기사</h4>
-              <p>산업관리공단</p>
-              <p>2022.11.25</p>
-            </div>
-            <div class="certification-item">
-              <h4>TOPCIT (상위 1%)</h4>
-              <p>750점</p>
-              <p>2025.12.1</p>
-            </div>
-          </div>
-        </div>
+          <!-- Awards Section -->
+          <div>
+            <h3 class="section-title">AWARDS</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-date">2025.10 - 2025.12</div>
+                <div class="timeline-award">
+                  BEST AWARD - AI SW IMPLEMENTATION COMPETITION
+                </div>
+                <div class="timeline-company">Korea University</div>
+                <div class="timeline-award-desc">
+                  Team Leader, Planning, Design, 4 members. AI-Based 2D Indoor
+                  Relighting System research and implementation
+                </div>
+              </div>
 
-        <div class="container list-container">
-          <h3 id="company">EXPERIENCE</h3>
+              <div class="timeline-item">
+                <div class="timeline-date">2022.09 - 2023.05</div>
+                <div class="timeline-award">BEST COLLABORATION AWARD</div>
+                <div class="timeline-company">KDB Industrial Bank</div>
+                <div class="timeline-award-desc">
+                  Sub-PL for overseas AML monitoring new business and system
+                  introduction
+                </div>
+              </div>
 
-          <div class="row clearfix layout">
-            <div class="col-xs-12 col-sm-4 col-md-3 details">
-              <h4>KDB 산업은행</h4>
-              <p><b>국내 AML 및 WatchList 시스템 운영</b></p>
-              <p>2021.12 ~ 2024.12</p>
-            </div>
-            <div class="col-xs-12 col-sm-8 col-md-9 content">
-              <p><strong>STR/CTR 운영</strong></p>
-              <ul>
-                <li>
-                  산업은행내 STR Rule 점검. 중복·충돌·과탐 구간을 구조적으로
-                  정리
-                </li>
-                <li>
-                  룰 목적·커버리지 기준으로 룰셋을 통합/정돈해, 반복 적출과
-                  재검토 부담을 낮춰
-                </li>
-                <li>판단 기준의 일관성과 운영 효율개선 (2시간->30분)</li>
-              </ul>
+              <div class="timeline-item">
+                <div class="timeline-date">2021.01 - 2021.06</div>
+                <div class="timeline-award">
+                  SEOUL INSTITUTE DIRECTOR'S AWARD
+                </div>
+                <div class="timeline-company">Urban Science Competition</div>
+                <div class="timeline-award-desc">
+                  Team Leader, Planning, Design, 3 members
+                </div>
+              </div>
 
-              <p><strong>KOFIU 보고 편의 개선</strong></p>
-              <ul>
-                <li>
-                  현업 보고 과정에서 놓치기 쉬웠던 핵심 정보·필수값·검증 로직을
-                  플랫폼 내에 정리
-                </li>
-                <li>
-                  보고 흐름을 단순화해 반려/누락 리스크를 낮추고(20%->7%), 처리
-                  시간을 단축
-                </li>
-                <li>보고 품질이 표준화되면서 신규 담당자 적응 속도도 개선</li>
-              </ul>
+              <div class="timeline-item">
+                <div class="timeline-date">2020.05 - 2020.07</div>
+                <div class="timeline-award">
+                  MINISTER OF PUBLIC ADMINISTRATION AWARD
+                </div>
+                <div class="timeline-company">
+                  Address-Based Industry Creation Idea Competition
+                </div>
+                <div class="timeline-award-desc">
+                  Team Leader, Planning, Design, 1 member
+                </div>
+              </div>
 
-              <p><strong>UI/프로세스 개선</strong></p>
-              <ul>
-                <li>
-                  STR 케이스 조회 → 증빙 확인 → 사유 작성 → 제출까지의 작업
-                  동선을 재정비
-                </li>
-                <li>
-                  반복 입력/왕복 작업을 줄여 오기입 및 실제 검토에 들어가는 시간
-                  단축
-                </li>
-              </ul>
+              <div class="timeline-item">
+                <div class="timeline-date">2019.06 - 2019.11</div>
+                <div class="timeline-award">4TH PLACE</div>
+                <div class="timeline-company">Defense Open Source Academy</div>
+                <div class="timeline-award-desc">
+                  IoT course. Smart tumbler exterior development and app
+                  integration. 1 member
+                </div>
+              </div>
 
-              <p><strong>오류/예외 대응 매뉴얼 구축</strong></p>
-              <ul>
-                <li>
-                  운영 중 발생한 오류·예외 케이스를 수집해 트러블슈팅 매뉴얼
-                  작성
-                </li>
-                <li>
-                  증상별 원인/조치/예방 기준을 표준화해 장애 대응 속도와
-                  재현성을 높임
-                </li>
-                <li>
-                  신규 인력의 실수 예방 및 조치 가이드를 만들어 업무효율 개선
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="row clearfix layout">
-            <div class="col-xs-12 col-sm-4 col-md-3 details">
-              <h4>KDB 산업은행</h4>
-              <p><b>해외거래 트랜잭션 모니터링</b></p>
-              <p>2021.12 ~ 2024.12</p>
-            </div>
-            <div class="col-xs-12 col-sm-8 col-md-9 content">
-              <ul>
-                <li>
-                  해외 지점 규제 기반 AML 체계를 신규 구축하는 프로젝트에서
-                  Sub-PL로 실무 전반을 담당
-                </li>
-                <li>
-                  외국 협력사와 서류·인프라·보안·장비 스펙·스크립트 개발·MCI
-                  설계·ETL 아키텍처 회의 병행
-                </li>
-                <li>
-                  컨테이너 기반 서버 + Elasticsearch 환경의 구조적 차이를 빠르게
-                  분석하여 행내 기존 방식과의 갭을 해소
-                </li>
-                <li>
-                  WBS를 별도로 관리하며 일정/리스크를 선제적으로 조율하여 지연
-                  없이 오픈
-                </li>
-                <li>
-                  신규 업무 도입의 성과를 인정받아 Best Collaboration Award
-                  수상(신입 중 최초)
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="row clearfix layout">
-            <div class="col-xs-12 col-sm-4 col-md-3 details">
-              <h4>KDB 산업은행</h4>
-              <p><b>FDS / 발신로깅 운영</b></p>
-              <p>2021.12 ~ 2024.12</p>
-            </div>
-            <div class="col-xs-12 col-sm-8 col-md-9 content">
-              <ul>
-                <li>
-                  실시간 이체 거래 이상징후 탐지(FDS)에서 Rule 기반 모니터링과
-                  데이터 정제/추출을 수행
-                </li>
-                <li>
-                  운영 중 발생하는 오류·예외 케이스를 정리해 트러블슈팅 매뉴얼을
-                  구축
-                </li>
-                <li>
-                  증상별 원인/조치/예방 기준을 표준화하여 재현성·대응 속도·운영
-                  안정성 향상
-                </li>
-                <li>
-                  내·외부 파일 전송 흐름을 안정적으로 모니터링해 감사·거래
-                  검증에 필요한 데이터를 신속 제공
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="container list-container">
-          <h3 id="experience">PROJECT</h3>
-          <div class="row clearfix layout">
-            <div class="col-xs-12 col-sm-4 col-md-3 details">
-              <h4>고려대학교 AI SW Academy</h4>
-            </div>
-            <div class="col-xs-12 col-sm-8 col-md-9 content">
-              <p>
-                ML 교육 기반 프로젝트 수행, 2D 이미지 기반 Re-lighting 기술 관련
-                연구/구현
-              </p>
-              <p><strong>성과:</strong> AI SW 구현대회 최우수상 수상</p>
-            </div>
-          </div>
-          <div class="row clearfix layout">
-            <div class="col-xs-12 col-sm-4 col-md-3 details">
-              <h4>금융결제원 SI 수행</h4>
-              <p><b>2025.01 ~ 2025.06</b></p>
-            </div>
-            <div class="col-xs-12 col-sm-8 col-md-9 content">
-              <ul>
-                <li>전자지급보증서 업무 분석, 설계</li>
-                <li>핵심 서비스 설계 및 품질 기준 검토</li>
-                <li>금융서비스 SI·운영 이해도 확장</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="container list-container">
-          <h3 id="awards">AWARDS</h3>
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-date">2019.01 ~ 2019.04</div>
-              <div class="timeline-title">서울시 유휴공간 개발 공모전</div>
-              <div class="timeline-award">서울시장상</div>
-              <div class="timeline-org">서울시</div>
-              <div class="timeline-content">팀장, 기획, 설계, 2인참여</div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-date">2019.06 ~ 2019.11</div>
-              <div class="timeline-title">국방오픈소스 아카데미</div>
-              <div class="timeline-award">4위</div>
-              <div class="timeline-org">국방부</div>
-              <div class="timeline-content">
-                IOT과정 집체교육과정으로 입소. 스마트 텀블러 외관 개발 및
-                앱연동. 1인 참여
+              <div class="timeline-item">
+                <div class="timeline-date">2019.01 - 2019.04</div>
+                <div class="timeline-award">SEOUL MAYOR'S AWARD</div>
+                <div class="timeline-company">
+                  Seoul Idle Space Development Competition
+                </div>
+                <div class="timeline-award-desc">
+                  Team Leader, Planning, Design, 2 members
+                </div>
               </div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-date">2020.05 ~ 2020.07</div>
-              <div class="timeline-title">주소기반산업창출 아이디어 공모전</div>
-              <div class="timeline-award">행정안전부장관상</div>
-              <div class="timeline-org">LX, 행정안전부</div>
-              <div class="timeline-content">팀장, 기획, 설계, 1인참여</div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-date">2021.01 ~ 2021.06</div>
-              <div class="timeline-title">도시과학대전</div>
-              <div class="timeline-award">서울연구원장상</div>
-              <div class="timeline-org">서울시</div>
-              <div class="timeline-content">팀장, 기획, 설계, 3인참여</div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-date">2022.09 ~ 2023.05</div>
-              <div class="timeline-title">
-                산업은행 국외AML 모니터링 신규사업
-              </div>
-              <div class="timeline-award">BestCollabo상</div>
-              <div class="timeline-org">KDB산업은행</div>
-              <div class="timeline-content">
-                Sub PL, 신규 업무 및 시스템 도입
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-date">2024.06 ~ 2024.08</div>
-              <div class="timeline-title">LH COMPASS</div>
-              <div class="timeline-award">본선진출</div>
-              <div class="timeline-org">데이터분석공모전</div>
-              <div class="timeline-content">팀장, 기획, 설계, 3인참여</div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-date">2025.09 ~ 2025.10</div>
-              <div class="timeline-title">한국경제 아이디어대회</div>
-              <div class="timeline-award">장려상</div>
-              <div class="timeline-content">팀장, 기획, 설계, 3인참여</div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-date">2025.10 ~ 2025.12</div>
-              <div class="timeline-title">고려대학교 AI SW 구현 대회</div>
-              <div class="timeline-award">최우수상</div>
-              <div class="timeline-org">고려대학교</div>
-              <div class="timeline-content">팀장, 기획, 설계, 4인참여</div>
-            </div>
           </div>
-        </div>
-
-        <div class="container list-container">
-          <h3 id="social-service">SOCIAL SERVICE & ACTIVITIES</h3>
-          <ul>
-            <li>라오스 해외봉사</li>
-            <li>줌머인 컴퓨터 교육 봉사</li>
-          </ul>
-        </div>
-
-        <div class="container list-container">
-          <h3 id="club">CLUB ACTIVITIES</h3>
-          <ul>
-            <li>Urban-IT - 창립멤버/멘토</li>
-          </ul>
-        </div>
-
-        <div class="container list-container">
-          <h3 id="work-experience">WORK EXPERIENCE</h3>
-          <div class="row clearfix layout">
-            <div class="col-xs-12 col-sm-4 col-md-3 details">
-              <h4>세리정보기술</h4>
-              <p><b>산업은행 (AML, FDS외주운영)</b></p>
-              <p>2021.12 ~ 2024.12</p>
-              <p>KDB산업은행</p>
-            </div>
-            <div class="col-xs-12 col-sm-8 col-md-9 content">
-              <p>산업은행 AML, FDS 외주운영 업무 수행</p>
-            </div>
-          </div>
-          <div class="row clearfix layout">
-            <div class="col-xs-12 col-sm-4 col-md-3 details">
-              <h4>비즈테크아이</h4>
-              <p><b>금융결제원 SI</b></p>
-              <p>2025.01 ~ 2025.06</p>
-              <p>금융결제원</p>
-            </div>
-            <div class="col-xs-12 col-sm-8 col-md-9 content">
-              <p>금융결제원 SI 업무 수행</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="container footer-container">
-          <p>Hwang SunWoo - sweddie@naver.com - References on request</p>
         </div>
       </div>
     </main>
