@@ -47,9 +47,22 @@
       }
       .header-right {
         text-align: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 8px;
       }
       .header-right p {
-        margin: 10px 0;
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #444;
+      }
+      .header-right p strong {
+        display: inline-block;
+        min-width: 80px;
+        font-weight: 600;
+        color: #222;
       }
       .icons {
         list-style: none;
@@ -414,12 +427,21 @@
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 header-right">
               <p>
-                Email: <a href="mailto:sweddie@naver.com">sweddie@naver.com</a>
+                <strong>Name:</strong> Hwang SunWoo
               </p>
-              <p>name: 황선우</p>
-              <p>연락처: 010-8413-8898</p>
-              <p>나이: 30</p>
-              <p>학력: University Of Seoul (major: Urban Planning)</p>
+              <p>
+                <strong>Email:</strong> <a href="mailto:sweddie@naver.com" style="color: #0066cc; text-decoration: none;">sweddie@naver.com</a>
+              </p>
+              <p>
+                <strong>Phone:</strong> 010-8413-8898
+              </p>
+              <p>
+                <strong>Age:</strong> 30
+              </p>
+              <p>
+                <strong>Education:</strong> University of Seoul<br />
+                <span style="margin-left: 80px; color: #666; font-size: 0.9rem;">B.S. in Urban Planning</span>
+              </p>
             </div>
           </div>
         </div>
